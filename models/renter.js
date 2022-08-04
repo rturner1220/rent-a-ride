@@ -38,7 +38,7 @@ Renter.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'renter'
+        modelName: 'Renter'
     }
 );
 

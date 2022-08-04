@@ -31,7 +31,7 @@ Vehicle.init(
         renter_id: {
             type: Datatypes.INTEGER,
             refernces: {
-                model: 'renter',
+                model: 'Renter',
                 key: 'id'
             }
         }
@@ -42,7 +42,7 @@ Vehicle.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'vehicle'
+        modelName: 'Vehicle'
     }
 );
 
