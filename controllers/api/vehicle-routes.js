@@ -1,18 +1,18 @@
 const router = require('express').Router();
-const {Vehicle, Renter} = require('../../models');
+const {Vehicle} = require('../../models');
 
 //the api/vehicles endpoint
 //access the vehicle model and find all vehicles
 router.get('/', (req, res) => {
-    Vehicle.findall({
+    Vehicle.findAll({
         //can add attributes, but should pull all attributes since we're pulling the whole Vehicle model
         //include the associated renter
-        include: [
-            {
-                model: Renter,
+        // include: [
+        //     {
+                // model: Renter,
                 //again, can include attributes but should pull all attributes since we're pulling the whole Renter model
-            }
-        ]
+        //     }
+        // ]
     })
     .then(dbVehicleData => res.json(dbVehicleData))
     .catch(err => {
@@ -28,11 +28,11 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         },
         //includes the associated Renters with the vehicle
-        include: [
-            {
-                model: Renter
-            }
-        ]
+        // include: [
+        //     {
+        //         model: Renter
+        //     }
+        // ]
     })
     .then(dbVehicleData => {
         if(!dbVehicleData) {
@@ -51,6 +51,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req,res) => {
     Vehicle.create({
         id: req.body.id,
+        vehicleName: req.body.vehicleName,
         vehicleMake: req.body.vehicleMake,
         vehicleModel: req.body.vehicleModel,
         vehicleYear: req.body.vehicleYear
