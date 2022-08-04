@@ -1,6 +1,6 @@
 const Vehicle = require('./vehicle');
-const Renter = require('./renter');
+// const Renter = require('./renter');
 
 
 
-module.exports = { Vehicle, Renter };
+module.exports = { Vehicle};
