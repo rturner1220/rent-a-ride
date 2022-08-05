@@ -9,3 +9,7 @@ router.use((req,res) => {
 });
 
 module.exports = router;
+
+const homeRoutes = require('./home-routes.js');
+
+router.use('/', homeRoutes);
