@@ -111,26 +111,4 @@ router.post('/logout', (req, res) => {
     }
 });
 
-router.put('/:id', (req, res) => {
-    Renter.update(req.body, {
-        individualHooks: true,
-        where: {
-            id: req.params.id,
-        },
-    })
-        .then(dbRenterData => {
-            if (!dbRenterData) {
-                res.status(404).json({
-                    message: 'No renter found with this id',
-                });
-                return;
-            }
-            res.json(dbRenterData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
-
 module.exports = router;

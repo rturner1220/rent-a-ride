@@ -1,24 +1,22 @@
-const { Renter } = require('../models')
+const { Renter } = require('../models');
 
 const renterData = [
     {
         renterName: 'Steve Mcqueen',
         email: 'CoolGuy@testemail.com',
-        password: 'TCrown'
+        password: 'TCrown',
     },
     {
         renterName: 'Elroy Blues',
         email: 'Drytoast@testemail.com',
-        password: 'MissionFromGod'
+        password: 'MissionFromGod',
     },
     {
         renterName: 'Jeffery Lebowski',
         email: 'TheDude@testemail.com',
-        password: 'TiestheRoomTogether'
-    }
-]
-
-
+        password: 'TiestheRoomTogether',
+    },
+];
 
 const seedRenter = () => Renter.bulkCreate(renterData);
 

@@ -1,4 +1,4 @@
-const { Vehicle } = require('../models')
+const { Vehicle } = require('../models');
 
 const vehicleData = [
     {
@@ -60,9 +60,8 @@ const vehicleData = [
         vehicleMake: 'Plymouth',
         vehicleModel: 'Fury',
         vehicleYear: 1958,
-    }
-]
-
+    },
+];
 
 const seedVehicle = () => Vehicle.bulkCreate(vehicleData);
 
