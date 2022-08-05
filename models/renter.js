@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt');
 
 class Renter extends Model {}
 
-Renter.init({
+Renter.init(
+    {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -30,12 +31,15 @@ Renter.init({
         validate: {
             len: [4],
         },
+    }
     },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'Renter',
-});
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Renter',
+    }
+);
 
 module.exports = Renter;
