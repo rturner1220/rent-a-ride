@@ -27,13 +27,13 @@ Vehicle.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        //     renter_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //     model: 'Renter',
-        //     key: 'id'
-        //     }
-        // }
+            renter_id: {
+            type: DataTypes.INTEGER,
+            references: {
+            model: 'Renter',
+            key: 'id'
+            }
+        }
     },
     {
         sequelize,
