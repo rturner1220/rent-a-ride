@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 router.get('/', (req, res) => {
     res.render('homepage', {
       id: 1,
@@ -11,3 +12,12 @@ router.get('/', (req, res) => {
       }
     });
   });
+=======
+const router = require('express').Router();
+
+router.get('/', (req,res) => {
+    res.render('homepage');
+});
+
+module.exports = router;
+>>>>>>> 857eab757d1df2b1e22ffd0af1156fd03b8342ab
