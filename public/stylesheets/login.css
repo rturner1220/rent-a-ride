@@ -1,13 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     width: 100%;
     height: auto;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.7 rem;
+    text-align: center;
+    border-radius: 2.5rem;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
 }
 
 .login-header {
     background-image: url("/assets/images/Christine.jpg");
 }
 
-.login-form {
-    font-size: x-large;
-    text-align: center;
+.signup,
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#email-login,
+#password-login,
+#username-signup,
+#email-signup,
+#password-signup {
+    display: block;
+    justify-content: center;
 }
