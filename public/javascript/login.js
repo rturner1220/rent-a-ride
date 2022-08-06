@@ -27,7 +27,7 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
     event.preventDefault();
 
-    const renterName = document.querySelector('#renter-login').value.trim();
+    const renterName = document.querySelector('#renter-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
