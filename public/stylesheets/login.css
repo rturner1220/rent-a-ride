@@ -37,6 +37,13 @@ header {
     background-image: url("/assets/images/Christine.jpg");
 }
 
+.signup,
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
 
 #email-login,
 #password-login,
