@@ -14,16 +14,16 @@
     <header>
       <h1>
         <a href="/">Rent-A-Ride</a>
+        <a href="/login">Login/Sign-up</a>
       </h1>
       <nav>
         {{#if loggedIn}}
-        <a href="/">homepage</a>
+        <a href="/rental">Rental Page</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{/if}}
         {{#if loggedOut}}
         <a href="/login">login</a>
         {{/if}}
-
       </nav>
     </header>
     <main>
@@ -35,6 +35,7 @@
   </div>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  <script src="/javascript/rental.js"></script>
   {{/if}}
   {{#if loggedOut}}
   <script src="/javascript/login.js"></script>

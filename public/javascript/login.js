@@ -1,13 +1,15 @@
 async function loginFormHandler(event) {
     event.preventDefault();
 
+    const renterName = document.querySelector('#renter-login').value.trim();
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
-    if (email && password) {
-        const response = await fetch('/api/users/login', {
+    if (renterName && email && password) {
+        const response = await fetch('/api/renter', {
             method: 'post',
             body: JSON.stringify({
+                renterName,
                 email,
                 password
             }),
@@ -15,7 +17,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/rental');
         } else {
             alert(response.statusText);
         }
@@ -25,15 +27,15 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
     event.preventDefault();
 
-    const username = document.querySelector('#username-signup').value.trim();
+    const renterName = document.querySelector('#renter-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
-    if (username && email && password) {
-        const response = await fetch('/api/users', {
+    if (renterName && email && password) {
+        const response = await fetch('/api/renter', {
             method: 'post',
             body: JSON.stringify({
-                username,
+                renterName,
                 email,
                 password
             }),
@@ -41,7 +43,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/rental');
         } else {
             alert(response.statusText);
         }
