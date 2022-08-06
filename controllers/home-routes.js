@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
+<<<<<<< HEAD
 
 //route to the login page
 router.get('/login', (req, res) => {
@@ -18,3 +19,5 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+=======
+>>>>>>> jason
