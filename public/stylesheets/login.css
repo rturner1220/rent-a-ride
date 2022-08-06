@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    height: auto;
+}
+
+.login-header {
+    background-image: url("/assets/images/Christine.jpg");
+}
+
+.login-form {
+    font-size: x-large;
+    text-align: center;
+}
