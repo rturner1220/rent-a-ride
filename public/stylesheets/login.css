@@ -45,9 +45,10 @@ header {
 
 }
 
+#renter-login,
 #email-login,
 #password-login,
-#username-signup,
+#renter-signup,
 #email-signup,
 #password-signup {
     display: block;
