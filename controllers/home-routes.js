@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     res.render('homepage');
 });
 
 module.exports = router;
-<<<<<<< HEAD
 
 //route to the login page
 router.get('/login', (req, res) => {
@@ -19,5 +19,3 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
-=======
->>>>>>> jason
