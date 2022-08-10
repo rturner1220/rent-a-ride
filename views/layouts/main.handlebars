@@ -19,17 +19,23 @@
                         class='ms-5 mt-2' /></a>
                 <a href="/login" class='text-decoration-none text-reset'><span
                         class='me-5 mt-2 fs-6'>Login/Sign-Up</span></a>
+
+                <button id="logout" class="btn-no-style">logout</button>
+                {{!-- <a href="/logout" class='text-decoration-none text-reset'><span
+                        class='me-5 mt-2 fs-6'>Logout</span></a> --}}
+
+
             </h1>
-            <nav>
-                {{!-- {{#if loggedIn}}
+            {{!-- <nav>
+                {{#if loggedIn}}
                 <a href="/rental">homepage</a>
                 <button id="logout" class='btn-no-style'>logout</button>
-                {{/if}} --}}
+                {{/if}}
                 {{#if loggedOut}}
                 <a href="/login">login</a>
                 {{/if}}
 
-            </nav>
+            </nav> --}}
         </header>
         <main>
             {{{body}}}
