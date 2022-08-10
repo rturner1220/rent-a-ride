@@ -21,21 +21,8 @@
                         class='me-5 mt-2 fs-6'>Login/Sign-Up</span></a>
 
                 <button id="logout" class="btn-no-style">logout</button>
-                {{!-- <a href="/logout" class='text-decoration-none text-reset'><span
-                        class='me-5 mt-2 fs-6'>Logout</span></a> --}}
-
 
             </h1>
-            {{!-- <nav>
-                {{#if loggedIn}}
-                <a href="/rental">homepage</a>
-                <button id="logout" class='btn-no-style'>logout</button>
-                {{/if}}
-                {{#if loggedOut}}
-                <a href="/login">login</a>
-                {{/if}}
-
-            </nav> --}}
         </header>
         <main>
             {{{body}}}
@@ -46,8 +33,6 @@
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{!--
-    <script src="/javascript/rental.js"></script> --}}
     {{/if}}
     {{#if loggedOut}}
     <script src="/javascript/login.js"></script>

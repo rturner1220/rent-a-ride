@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/login');
+            document.location.replace('/rental');
         } else {
             alert(response.statusText);
         }
@@ -44,7 +44,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/login');
+            document.location.replace('/rental');
         } else {
             alert(response.statusText);
         }

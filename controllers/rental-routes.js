@@ -23,15 +23,5 @@ router.get('/', (req, res) => {
         });
 });
 
-// router.post('/', (req.res) => {
-//     Vehicle.findOne({
-//         where: {
-//             vehicle_id: req.body.id
-//         }
-
-//     }
-//     })
-
-// })
 
 module.exports = router;
