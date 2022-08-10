@@ -1,13 +1,21 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const {Vehicle} = require("../models");
+const { Renter, Vehicle} = require('../models');
+// const withAuth = require('../utils/auth');
 
-router.get('/rental', (req,res) => {
-    Vehicle.findAll ({
+router.get('/', (req, res) => {
+    Vehicle.findAll({
+        where: {
+        //use the ID from the session
+        renter_id: req.session.renter_id
+        },
     })
-    .then(dbVehicleData => {
-        const vehicles = dbVehicleData.map(vehicle => vehicle.get({plain: true}));
-        res.render('rental', {vehicles, loggedIn: true});
+    .then(dbRentalData => {
+        if(dbRentalData) {
+            res.render('rental',);
+        } else {
+            res.status(404).end();
+        }
     })
     .catch(err => {
         console.log(err);
