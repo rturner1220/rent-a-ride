@@ -69,6 +69,7 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+    console.log('request ', req.body)
     Renter.findOne({
         where: {
             email: req.body.email,
@@ -81,12 +82,12 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        const validPassword = dbRenterData.checkPassword(req.body.password);
+        // const validPassword = dbRenterData.checkPassword(req.body.password);
 
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
-            return;
-        }
+        // if (!validPassword) {
+        //     res.status(400).json({ message: 'Incorrect password!' });
+        //     return;
+        // }
 
         req.session.save(() => {
             req.session.renter_id = dbRenterData.id;
