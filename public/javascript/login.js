@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/rental');
+            document.location.replace('/vehicle');
         } else {
             alert(response.statusText);
         }
@@ -44,7 +44,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/rental');
+            document.location.replace('/vehicle');
         } else {
             alert(response.statusText);
         }

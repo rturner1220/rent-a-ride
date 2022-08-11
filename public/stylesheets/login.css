@@ -44,13 +44,38 @@ header {
     justify-content: space-between;
 
 }
-
 #renter-login,
 #email-login,
 #password-login,
-#renter-signup,
+#username-signup,
 #email-signup,
 #password-signup {
     display: block;
     justify-content: center;
+    border-radius: 25px;
+}
+
+label {
+    color:burlywood;
+    text-decoration-style: solid;
+    text-size-adjust: 300px;
+}
+
+.btn-no-style {
+border-radius: 25px;
+}
+
+button {
+    border-radius: 25px;
+}
+
+.text-decoration-none-text-reset{
+    text-decoration-style: solid;
+}
+
+.footer{
+    color:burlywood;
+    text-decoration-style: solid;
+    text-size-adjust: 300px;
+    text-align: center;
 }
