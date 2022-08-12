@@ -17,7 +17,7 @@ router.get('/login', (req, res) => {
 
 
 //route to rental page
-router.get('/vehicle', (req,res) => {
+router.get('/vehicle', withAuth, (req,res) => {
     Vehicle.findAll({
         raw: true,
         attributes: [
