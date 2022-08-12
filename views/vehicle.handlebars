@@ -4,7 +4,13 @@
 <h1 class="vehicle-page-title">Choose a Rental</h1>
 <ul class="vehicle-styling">
 {{#each vehicles}}
-    <li>{{vehicles}}</li>
+{{log this}}
+    <li>
+    {{vehicleName}}</br>
+    {{vehicleMake}}</br>
+    {{vehicleModel}}</br>
+    {{vehicleYear}}</br>
+    </li>
 {{/each}}
 </ul>
 {{!-- <ul class="vehicle-styling">

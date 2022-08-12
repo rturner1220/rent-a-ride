@@ -19,17 +19,18 @@ router.get('/login', (req, res) => {
 //route to rental page
 router.get('/vehicle', (req,res) => {
     Vehicle.findAll({
+        raw: true,
         attributes: [
             'id',
-            'vehicle_name',
-            'vehicle_make',
-            'vehicle_model',
-            'vehicle_year'
+            'vehicleName',
+            'vehicleMake',
+            'vehicleModel',
+            'vehicleYear'
         ]
     })
     .then(dbVehicleData => {
         //pass a single vehicle object into the vehicle page
-        const vehicles = dbVehicleData.map(vehicle => vehicle.get({plain: true}));
+        const vehicles = dbVehicleData
         res.render('vehicle', {vehicles});
     })
 });
