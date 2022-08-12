@@ -1,18 +1,36 @@
 <head>
     <link rel="stylesheet" href="/stylesheets/vehicle.css">
+    <link rel="stylesheet" href="/stylesheets/datepicker.min.css">
 </head>
 <h1 class="vehicle-page-title">Choose a Rental</h1>
 <ul class="vehicle-styling">
-{{#each vehicles}}
-{{log this}}
+    {{#each vehicles}}
+    {{log this}}
     <li>
-    {{vehicleName}}</br>
-    {{vehicleMake}}</br>
-    {{vehicleModel}}</br>
-    {{vehicleYear}}</br>
+        {{vehicleName}}</br>
+        {{vehicleMake}}</br>
+        {{vehicleModel}}</br>
+        {{vehicleYear}}</br>
+        <button id="reserve" class="reserve-btn">Reserve</button>
     </li>
-{{/each}}
+    {{/each}}
 </ul>
+
+<dialog id="reservation-modal">
+    <form method="dialog">
+        <div>
+            <div class="date-range"></div>
+            <div class="date-range-end"></div>
+
+        </div>
+        <button type="submit" id="reserve-button">submit</button>
+    </form>
+</dialog>
+
+
+
+
+
 {{!-- <ul class="vehicle-styling">
     {{#each vehicles}}
     <li>{{this}}</li>
@@ -126,6 +144,8 @@
 </div> --}}
 
 
-{{!-- <script src="/javascript/rental.js"></script> --}}
+{{!--
+<script src="/javascript/rental.js"></script> --}}
+<script src="/javascript/datepicker.min.js"></script>
 <script src="/javascript/logout.js"></script>
-
+<script src="/javascript/reserve.js"></script>
