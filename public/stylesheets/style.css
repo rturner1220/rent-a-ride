@@ -6,3 +6,27 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.logout-btn {
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.homepage-styling-title {
+    color: white;
+}
+
+.homepage-styling-h1 {
+    font-size: 20pt;
+    color: white;
+}
+
+.vehicle-rental-link {
+    font-size: 25px;
+    color: black;
+}
+
+.login-rental-link {
+    font-size: 25px;
+    color: black;
+}

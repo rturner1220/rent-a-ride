@@ -6,7 +6,8 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
 
     if (renterName && email && password) {
-        const response = await fetch('/api/renter', {
+
+        const response = await fetch('/api/renter/login', {
             method: 'post',
             body: JSON.stringify({
                 renterName,
@@ -17,7 +18,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/rental');
+            document.location.replace('/vehicle');
         } else {
             alert(response.statusText);
         }
@@ -43,7 +44,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/rental');
+            document.location.replace('/vehicle');
         } else {
             alert(response.statusText);
         }
