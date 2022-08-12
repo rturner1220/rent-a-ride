@@ -1,4 +1,4 @@
-# Rent-A-Ride
+🚗 # Rent-A-Ride
 
 ## Description 
 Rent-A-Ride is an app that was created to help individuals find classic movie vehicles to rent when in need or for fun. After logging in or signing up, the user will be able to see a list of vehicles to rent from and be able to select a date to rent the vehicles for. 
