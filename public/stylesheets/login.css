@@ -19,18 +19,16 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.7 rem;
+    font-size: 1.7rem;
     text-align: center;
     border-radius: 2.5rem;
 }
 
 .login-form,
 .signup-form {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-
+    display: grid;
+    grid-template-columns: min-content;
+    text-align: center;
 }
 
 .login-header {
@@ -44,6 +42,7 @@ header {
     justify-content: space-between;
 
 }
+#renter-signup,
 #renter-login,
 #email-login,
 #password-login,
@@ -80,6 +79,3 @@ button {
     text-align: center;
 }
 
-#renter-login {
-    align-items: center;
-}
