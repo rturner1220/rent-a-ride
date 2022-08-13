@@ -8,7 +8,7 @@ const renterData = [
         renter_id: 1,
     },
     {
-        renterName: 'Elroy Blues',
+        renterName: 'Elwood Blues',
         email: 'Drytoast@testemail.com',
         password: 'MissionFromGod',
         renter_id: 2,

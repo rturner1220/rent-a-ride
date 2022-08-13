@@ -4,13 +4,14 @@
 </head>
 <h1 class="vehicle-page-title">Choose a Rental</h1>
 <ul class="vehicle-styling">
-    {{#each vehicles}}
+    {{#each vehicles as |vehicle|}}
+
     {{log this}}
     <li>
-        {{vehicleName}}</br>
-        {{vehicleMake}}</br>
-        {{vehicleModel}}</br>
-        {{vehicleYear}}</br>
+        {{vehicle.vehicleName}}</br>
+        {{vehicle.vehicleMake}}</br>
+        {{vehicle.vehicleModel}}</br>
+        {{vehicle.vehicleYear}}</br>
         <button id="reserve" class="reserve-btn">Reserve</button>
     </li>
     {{/each}}

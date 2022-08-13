@@ -1,7 +1,6 @@
 const reservationModal = document.querySelector("#reservation-modal")
 const reservationInput = reservationModal.querySelector('.date-range')
 const reservationInputEnd = reservationModal.querySelector('.date-range-end')
-
 const reservationDatePicker = datepicker(
     reservationInput,
     {
@@ -19,14 +18,14 @@ const reservationDatePickerEnd = datepicker(
     }
 )
 
-document.querySelector('#reserve').addEventListener('click',
-    function () {
+
+document.querySelectorAll('#reserve').forEach(item => {
+    item.addEventListener('click', event => {
 
         reservationModal.showModal();
 
-
-
-    });
+    })
+});
 
 reservationModal.querySelector('#reserve-button').addEventListener('click',
     async () => {
