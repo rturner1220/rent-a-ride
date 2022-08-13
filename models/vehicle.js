@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 class Vehicle extends Model { }
 
 
+
 Vehicle.init(
     {
         id: {

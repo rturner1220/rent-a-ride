@@ -1,9 +1,11 @@
 const router = require('express').Router();
-const { Renter, Vehicle } = require('../models');
+
+const { Renter, Vehicle} = require('../models');
+
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+    res.render('homepage');
 });
 
 //route to login page
@@ -38,3 +40,5 @@ router.get('/vehicle', withAuth, (req, res) => {
 
 
 module.exports = router;
+
+

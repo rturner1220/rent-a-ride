@@ -23,7 +23,7 @@ body {
 }
 
 .vehicle-rental-link {
-    font-size: 25px;
+    font-size: 25px; 
     color: black;
 }
 
@@ -31,7 +31,7 @@ body {
     font-size: 25px;
     color: black;
 }
-
 .login-form {
     align-items: center;
+
 }
