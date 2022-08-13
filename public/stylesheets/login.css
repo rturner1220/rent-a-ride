@@ -29,7 +29,6 @@ header {
     display: grid;
     grid-template-columns: min-content;
     text-align: center;
-
 }
 
 .login-header {
@@ -67,7 +66,6 @@ border-radius: 25px;
 
 button {
     border-radius: 25px;
-    text-align: center;
 }
 
 .text-decoration-none-text-reset{
