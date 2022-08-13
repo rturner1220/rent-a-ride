@@ -1,42 +1,49 @@
 <head>
-    <link rel="stylesheet" href="/stylesheets/vehicle.css">
-    <link rel="stylesheet" href="/stylesheets/datepicker.min.css">
+    <link
+        rel='stylesheet'
+        href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'
+    />
+    <link rel='stylesheet' href='/stylesheets/vehicle.css' />
+    <link rel='stylesheet' href='/stylesheets/datepicker.min.css' />
 </head>
-<h1 class="vehicle-page-title">Choose a Rental</h1>
-<ul class="vehicle-styling">
-    {{#each vehicles}}
-    {{log this}}
-    <li>
-        {{vehicleName}}</br>
-        {{vehicleMake}}</br>
-        {{vehicleModel}}</br>
-        {{vehicleYear}}</br>
-        <button id="reserve" class="reserve-btn">Reserve</button>
-    </li>
-    {{/each}}
-</ul>
-
-<dialog id="reservation-modal">
-    <form method="dialog">
+<div class='is-flex justify-content-center'>
+    <h1 class='vehicle-page-title is-size-1 has-text-weight-bold'>Choose a
+        Rental</h1>
+</div>
+<div class='container is-fluid'>
+    <div class='columns'>
+        {{#each vehicles}}
+            {{!-- {{log this}} --}}
+            <div class='column vehicle-styling'>
+                <p> {{vehicleName}}</p>
+                <p>{{vehicleMake}}</p>
+                <p>{{vehicleModel}}</p>
+                <p>{{vehicleYear}}</p>
+                <button
+                    id='reserve'
+                    class='reserve-btn button is-normal'
+                >Reserve</button>
+            </div>
+        {{/each}}
+    </div>
+</div>
+<dialog id='reservation-modal'>
+    <form method='dialog'>
         <div>
-            <div class="date-range"></div>
-            <div class="date-range-end"></div>
+            <div class='date-range'></div>
+            <div class='date-range-end'></div>
 
         </div>
-        <button type="submit" id="reserve-button">submit</button>
+        <button type='submit' id='reserve-button'>submit</button>
     </form>
 </dialog>
-
-
-
-
 
 {{!-- <ul class="vehicle-styling">
     {{#each vehicles}}
     <li>{{this}}</li>
     {{/each}}
 </ul> --}}
-{{!-- <div class="container">
+{{! <div class="container">
     <div class="row">
 
         <div class="card" style="width: 18rem;">
@@ -141,11 +148,10 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div> }}
 
-
-{{!--
-<script src="/javascript/rental.js"></script> --}}
-<script src="/javascript/datepicker.min.js"></script>
-<script src="/javascript/logout.js"></script>
-<script src="/javascript/reserve.js"></script>
+{{!
+<script src="/javascript/rental.js"></script> }}
+<script src='/javascript/datepicker.min.js'></script>
+<script src='/javascript/logout.js'></script>
+<script src='/javascript/reserve.js'></script>
