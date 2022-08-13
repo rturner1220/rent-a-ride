@@ -1,7 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vehicle extends Model {}
+class Vehicle extends Model { }
+
 
 
 Vehicle.init(
@@ -31,8 +32,8 @@ Vehicle.init(
         renter_id: {
             type: DataTypes.INTEGER,
             references: {
-            model: 'Renter',
-            key: 'id'
+                model: 'Renter',
+                key: 'id'
             }
         }
     },

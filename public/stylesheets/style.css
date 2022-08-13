@@ -7,6 +7,7 @@ body {
     background-size: cover;
 }
 
+
 .logout-btn {
     border: 2px solid black;
     font-size: 16px;
@@ -27,6 +28,10 @@ body {
 }
 
 .login-rental-link {
-    font-size: 25px; 
-    color: black; 
+    font-size: 25px;
+    color: black;
+}
+.login-form {
+    align-items: center;
+
 }
