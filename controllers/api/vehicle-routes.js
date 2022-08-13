@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Vehicle, Renter } = require('../../models');
+const {Vehicle, Renter} = require('../../models');
 
 //the api/vehicles endpoint
 //access the vehicle model and find all vehicles
@@ -8,17 +8,17 @@ router.get('/', (req, res) => {
         //can add attributes, but should pull all attributes since we're pulling the whole Vehicle model
         // include the associated renter
         include: [
-            {
-                model: Renter,
-                //again, can include attributes but should pull all attributes since we're pulling the whole Renter model
-            }
+        {
+        model: Renter,
+            //again, can include attributes but should pull all attributes since we're pulling the whole Renter model
+        }
         ]
     })
-        .then(dbVehicleData => res.json(dbVehicleData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        })
+    .then(dbVehicleData => res.json(dbVehicleData))
+    .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+    })
 });
 
 //find one vehicle by its id
@@ -30,25 +30,25 @@ router.get('/:id', (req, res) => {
         //includes the associated Renters with the vehicle
         include: [
             {
-                model: Renter
+            model: Renter
             }
         ]
     })
-        .then(dbVehicleData => {
-            if (!dbVehicleData) {
-                res.status(404).json({ message: 'No vehicle was found with this id!' });
-                return;
-            }
-            res.json(dbVehicleData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    .then(dbVehicleData => {
+        if(!dbVehicleData) {
+            res.status(404).json({ message: 'No vehicle was found with this id!'});
+            return;
+        }
+        res.json(dbVehicleData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 //create a new vehicle
-router.post('/', (req, res) => {
+router.post('/', (req,res) => {
     Vehicle.create({
         id: req.body.id,
         vehicleName: req.body.vehicleName,
@@ -56,11 +56,11 @@ router.post('/', (req, res) => {
         vehicleModel: req.body.vehicleModel,
         vehicleYear: req.body.vehicleYear
     })
-        .then(dbVehicleData => res.json(dbVehicleData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    .then(dbVehicleData => res.json(dbVehicleData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;

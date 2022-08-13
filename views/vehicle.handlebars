@@ -4,9 +4,7 @@
 </head>
 <h1 class="vehicle-page-title">Choose a Rental</h1>
 <ul class="vehicle-styling">
-    {{#each vehicles as |vehicle|}}
-
-    {{log this}}
+    {{#each vehicles}}
     <li>
         {{vehicle.vehicleName}}</br>
         {{vehicle.vehicleMake}}</br>
@@ -27,7 +25,6 @@
         <button type="submit" id="reserve-button">submit</button>
     </form>
 </dialog>
-
 <script src="/javascript/datepicker.min.js"></script>
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/reserve.js"></script>
