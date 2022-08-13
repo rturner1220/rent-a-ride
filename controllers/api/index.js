@@ -8,6 +8,4 @@ router.use('/vehicle', vehicleRoutes);
 router.use('/renter', renterRoutes);
 
 
-
 module.exports = router;
-

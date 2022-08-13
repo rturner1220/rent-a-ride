@@ -40,8 +40,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
+}
 #renter-signup,
 #renter-login,
 #email-login,
@@ -55,14 +55,13 @@ header {
 }
 
 label {
-
     color:burlywood;
     text-decoration-style: solid;
     text-size-adjust: 300px;
 }
 
 .btn-no-style {
-    border-radius: 25px;
+border-radius: 25px;
 }
 
 button {
@@ -75,13 +74,7 @@ button {
 
 .footer{
     color:burlywood;
-
     text-decoration-style: solid;
     text-size-adjust: 300px;
     text-align: center;
 }
-
-#renter-login {
-    align-items: center;
-}
-
