@@ -18,39 +18,46 @@
         <link rel='stylesheet' href='/stylesheets/login.css' />
     </head>
 
-    <body class='container'>
-        <div class='wrapper'>
-            <header>
-                <h1
-                    class='d-flex justify-content-between flex-row align-items-center bg-white p-3'
-                >
-                    <a href='/'><img
-                            src='/assets/images/RentARideLogo-2.png'
-                            width='65'
-                            height='36'
-                            class='ms-5 mt-2'
-                        /></a>
-                    <a
-                        href='/login'
-                        class='text-decoration-none vehicle-rental-link'
-                    ><span class='me-5 mt-2 fs-6'>Vehicle Rental</span></a>
-                    <a
-                        href='/login'
-                        class='text-decoration-none login-rental-link'
-                    ><span class='me-5 mt-2 fs-6'>Login/Sign-Up</span></a>
-                    <button id='logout' class='logout-btn'>Logout</button>
 
-                </h1>
-            </header>
-            <main>
-                {{{body}}}
-            </main>
-        </div>
-        {{#if loggedIn}}
-            <script src='/javascript/logout.js'></script>
-        {{/if}}
-        {{#if loggedOut}}
-            <script src='/javascript/login.js'></script>
-        {{/if}}
-    </body>
+<body>
+    <div class='wrapper'>
+
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a href="/"><img src='/assets/images/RentARideLogo-2.png' width='65' height='36'
+                            class='ms-5 mt-2' /></a>
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="/login">Vehicle Rental</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <a href="/login" class="btn btn-outline-success">Login/Sign-Up</a></button>
+                                    <button id="logout" class="btn btn-outline-success">Logout</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+    </div>
+    </nav>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+
+    </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    {{#if loggedOut}}
+    <script src="/javascript/login.js"></script>
+    {{/if}}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
 </html>
