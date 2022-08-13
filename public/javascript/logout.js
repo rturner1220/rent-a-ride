@@ -11,7 +11,6 @@ async function logout() {
     }
 }
 
-
+console.log("button was clicked")
 
 document.querySelector('#logout').addEventListener('click', logout);
-

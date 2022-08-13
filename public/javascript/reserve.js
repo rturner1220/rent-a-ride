@@ -44,4 +44,3 @@ reservationModal.querySelector('#reserve-button').addEventListener('click',
             alert(response.statusText);
         }
     });
-
