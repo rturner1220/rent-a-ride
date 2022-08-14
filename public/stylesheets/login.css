@@ -7,12 +7,6 @@ header {
     height: auto;
 }
 
-.login-page {
-    display: flex;
-    justify-content: center;
-
-}
-
 .user-info {
     display: flex;
     justify-content: center;
@@ -24,24 +18,12 @@ header {
     border-radius: 2.5rem;
 }
 
-.login-form,
-.signup-form {
-    display: grid;
-    grid-template-columns: min-content;
+.login-form, .signup-form {
+    margin: auto;
+    align-items: center;
     text-align: center;
 }
 
-.login-header {
-    background-image: url("/assets/images/Christine.jpg");
-}
-
-.signup,
-.login {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
 #renter-signup,
 #renter-login,
 #email-login,
@@ -49,15 +31,9 @@ header {
 #username-signup,
 #email-signup,
 #password-signup {
-    display: block;
     justify-content: center;
     border-radius: 25px;
-}
-
-label {
-    color:burlywood;
-    text-decoration-style: solid;
-    text-size-adjust: 300px;
+    padding-bottom: 10px;
 }
 
 .btn-no-style {
