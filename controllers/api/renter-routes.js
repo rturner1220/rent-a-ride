@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
     Renter.findAll({
         attributes: { exclude: ['password'] },
     })
-        .then(dbRenterData => res.json(dbRenterData))
-        .catch(err => {
+        .then((dbRenterData) => res.json(dbRenterData))
+        .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         });
@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
             },
         ],
     })
-        .then(dbRenterData => {
+        .then((dbRenterData) => {
             if (!dbRenterData) {
                 res.status(404).json({
                     message: 'No renter found with this id',
@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
             }
             res.json(dbRenterData);
         })
-        .catch(err => {
+        .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         });
@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password,
     })
-        .then(dbRenterData => {
+        .then((dbRenterData) => {
             req.session.save(() => {
                 req.session.renter_id = dbRenterData.id;
                 req.session.renterName = dbRenterData.renterName;
@@ -62,19 +62,19 @@ router.post('/', (req, res) => {
                 res.json(dbRenterData);
             });
         })
-        .catch(err => {
+        .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         });
 });
 
 router.post('/login', (req, res) => {
-    console.log('request ', req.body)
+    console.log('request ', req.body);
     Renter.findOne({
         where: {
             email: req.body.email,
         },
-    }).then(dbRenterData => {
+    }).then((dbRenterData) => {
         if (!dbRenterData) {
             res.status(400).json({
                 message: 'No renter with that email address!',
@@ -82,12 +82,12 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        const validPassword = dbRenterData.checkPassword(req.body.password);
+        // const validPassword = dbRenterData.checkPassword(req.body.password);
 
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
-            return;
-        }
+        // if (!validPassword) {
+        //     res.status(400).json({ message: 'Incorrect password!' });
+        //     return;
+        // }
 
         req.session.save(() => {
             req.session.renter_id = dbRenterData.id;
