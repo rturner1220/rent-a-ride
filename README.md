@@ -27,5 +27,20 @@ Currently theis app is not being tested. If you are wanting to perform tests on 
 
 ## Deployed Heroku site
 
-## Screenshots of deployed site
+## Deployed Site Screenshots
+
+# Homepage
+![screenshot of portfolio](./public/assets/images/screenshot-1)
+
+# Login/Signup Page
+![screenshot of portfolio](./public/assets/images/screenshot-2)
+
+# Vehicle Rental Page
+![screenshot of portfolio](./public/assets/images/screenshot-3)
+
+# Reserve Vehicle Calendar
+![screenshot of portfolio](./public/assets/images/screenshot-4)
+
+# Reserve Vehicle Alert - after Submitting
+![screenshot of portfolio](./public/assets/images/screenshot-5)
 
