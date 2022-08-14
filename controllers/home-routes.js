@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Renter, Vehicle} = require('../models');
+const { Renter, Vehicle } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -15,9 +15,8 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-
 //route to rental page
-router.get('/vehicle', withAuth, (req,res) => {
+router.get('/vehicle', withAuth, (req, res) => {
     Vehicle.findAll({
         raw: true,
         attributes: [
@@ -25,14 +24,13 @@ router.get('/vehicle', withAuth, (req,res) => {
             'vehicleName',
             'vehicleMake',
             'vehicleModel',
-            'vehicleYear'
-        ]
-    })
-    .then(dbVehicleData => {
+            'vehicleYear',
+        ],
+    }).then((dbVehicleData) => {
         //pass a single vehicle object into the vehicle page
-        const vehicles = dbVehicleData
-        res.render('vehicle', {vehicles});
-    })
+        const vehicles = dbVehicleData;
+        res.render('vehicle', { vehicles });
+    });
 });
 
 module.exports = router;
