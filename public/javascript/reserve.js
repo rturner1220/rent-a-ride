@@ -30,16 +30,9 @@ document.querySelectorAll('#reserve').forEach(item => {
 reservationModal.querySelector('#reserve-button').addEventListener('click',
     async () => {
         const reservationRange = reservationDatePicker.getRange()
-        console.log(reservationRange)
-        const response = await fetch('/api/vehicle/reserve', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' }
-        });
+        console.log(reservationRange);
+        const confirmedReservation = Object.values(reservationRange);
+        alert("Your Reservation is Confirmed for" + confirmedReservation)
 
-        if (response.ok) {
-            // link to the totals page. 
-            document.location.replace('/');
-        } else {
-            alert(response.statusText);
-        }
+
     });
