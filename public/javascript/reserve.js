@@ -32,7 +32,7 @@ reservationModal.querySelector('#reserve-button').addEventListener('click',
         const reservationRange = reservationDatePicker.getRange()
         console.log(reservationRange);
         const confirmedReservation = Object.values(reservationRange);
-        alert("Your Reservation is Confirmed for" + confirmedReservation)
+        alert("Your Reservation is Confirmed for " + confirmedReservation)
 
 
     });
