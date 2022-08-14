@@ -30,17 +30,17 @@ Currently theis app is not being tested. If you are wanting to perform tests on 
 ## Deployed Site Screenshots
 
 # Homepage
-![screenshot of portfolio](./public/assets/images/screenshot-1)
+![screenshot of portfolio](./public/assets/images/screenshot-1.png)
 
 # Login/Signup Page
-![screenshot of portfolio](./public/assets/images/screenshot-2)
+![screenshot of portfolio](./public/assets/images/screenshot-2.png)
 
 # Vehicle Rental Page
-![screenshot of portfolio](./public/assets/images/screenshot-3)
+![screenshot of portfolio](./public/assets/images/screenshot-3.png)
 
 # Reserve Vehicle Calendar
-![screenshot of portfolio](./public/assets/images/screenshot-4)
+![screenshot of portfolio](./public/assets/images/screenshot-4.png)
 
 # Reserve Vehicle Alert - after Submitting
-![screenshot of portfolio](./public/assets/images/screenshot-5)
+![screenshot of portfolio](./public/assets/images/screenshot-5.png)
 
